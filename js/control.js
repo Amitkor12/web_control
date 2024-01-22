@@ -109,7 +109,7 @@ class Control {
     if (this.mode == "CTRL"){
       for (let key in this.inputs){
         // Calculate normalized value
-        const sensitivityScale = 0.2;
+        const sensitivityScale = 0.3;
         this.inputs[key].normx = Math.round(this.map(this.inputs[key].x,this.inputs[key].posx-this.inputs[key].r,this.inputs[key].posx+this.inputs[key].r,this.inputs[key].minx,this.inputs[key].maxx)*sensitivityScale);
         this.inputs[key].normy = Math.round(this.map(this.inputs[key].y,this.inputs[key].posy+this.inputs[key].r,this.inputs[key].posy-this.inputs[key].r,this.inputs[key].miny,this.inputs[key].maxy)*sensitivityScale);
 
